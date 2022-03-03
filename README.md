@@ -7,7 +7,7 @@ Rust API / cxx bindings for [**libtorrent**].
 
 All c++ reference can be found in libtorrent [**reference documentation**]
 
-[**reference documentation**] https://libtorrent.org/reference.html
+[**reference documentation**]: https://libtorrent.org/reference.html
 
 Exposed API Reference
 ---------------------
@@ -21,10 +21,12 @@ Exposed API Reference
 
 Install
 -------
-Download or [**build**] libtorrent (branch C_2_0)
+1/ Download or [**build**] libtorrent (branch C_2_0)
 
 [**build**]: https://libtorrent.org/building.html
 
-Build libtorrent-sys:
-RUSTFLAGS="-C linker=g++" CXX=g++ cargo build
+2/ Build libtorrent-sys:
 
+```
+RUSTFLAGS="-C linker=g++" CXX=g++ cargo build
+```
