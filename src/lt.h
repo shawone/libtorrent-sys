@@ -34,7 +34,7 @@ char const* version();
 namespace libtorrent {
 
 std::unique_ptr<lt::session> lt_create_session();
-std::unique_ptr<lt::add_torrent_params> lt_parse_magnet_uri(rust::Str uri);
+std::unique_ptr<lt::add_torrent_params> lt_parse_magnet_uri(rust::Str uri, rust::Str path);
 std::unique_ptr<lt::torrent_handle> lt_session_add_torrent(lt::session &ses, lt::add_torrent_params &params);
 void lt_session_remove_torrent(lt::session &ses, const lt::torrent_handle &hdl);
 void lt_session_pause(lt::session &ses);

@@ -34,7 +34,7 @@ pub mod ffi {
 	///
 	/// lt::add_torrent_params is return by lt::parse_magnet_uri,
 	/// then it configured with the given magnet string, and the current path
-	pub fn lt_parse_magnet_uri(uri: &str) -> UniquePtr<add_torrent_params>;
+	pub fn lt_parse_magnet_uri(uri: &str, path: &str) -> UniquePtr<add_torrent_params>;
 
 	/// This function return a struct of type lt::torrent_handle
 	///
