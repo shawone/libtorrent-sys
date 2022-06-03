@@ -72,7 +72,7 @@ rust::Str lt_torrent_get_name(const lt::torrent_handle &hdl)
 rust::Slice<const uint8_t> lt_torrent_bencode(const lt::torrent_handle &hdl)
 {
 	auto infos = hdl.torrent_file();
-  auto entry = lt::create_torrent(*infos).generate();
+	auto entry = lt::create_torrent(*infos).generate();
 	std::vector<char> vec;
 	lt::bencode(std::back_inserter(vec), entry);
 	rust::Slice<const uint8_t> slice{reinterpret_cast<const unsigned char *>(vec.data()), vec.size()};
