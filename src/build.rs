@@ -21,6 +21,10 @@
 fn main() {
     use std::env;
 
+    if env::var("DOCS_RS").is_ok() {
+        return;
+    }
+
     let mut cxx = cxx_build::bridge("src/lib.rs");
     let out_dir = env::var("OUT_DIR").unwrap();
     let manifest_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
